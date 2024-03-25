@@ -13,7 +13,7 @@ private enum ExternalURL {
     static let URLPrivacyPolicy =
         "https://humane-coriander-1a6.notion.site/Privacy-Policy-35f60d629ece47faac477225ba10e2bf"
     static let URLHelpFAQ = "https://humane-coriander-1a6.notion.site/Help-FAQ-c2fdb202b91c4147a656044fce33fd4c"
-    static let appStoreURL = "https://apps.apple.com/app/id6479580889"
+    static let appStoreURL = "https://apps.apple.com/app/id6479944746"
     static let appStoreReviewURL = "\(ExternalURL.appStoreURL)?action=write-review"
 }
 
@@ -57,6 +57,7 @@ public struct SettingsView: View {
                         ButtonHaptic {
                             routerPath.presentedSheet = .paywall(onCompletion: {_ in
                                 preferences.isPremium = true
+                                preferences.shouldBlockWithPaywall = false
                             })
                         } label: {
                             PremiumBannerView()
@@ -107,13 +108,6 @@ public struct SettingsView: View {
                         .hapticTapGesture {
                             navigateToSheet(sheetDestination: .webView(ExternalURL.URLPrivacyPolicy))
                         }
-//                        SettingRow(
-//                            title: "help & FAQ",
-//                            systemName: "questionmark.circle"
-//                        )
-//                        .hapticTapGesture {
-//                            navigateToSheet(sheetDestination: .webView(ExternalURL.URLHelpFAQ))
-//                        }
                     } footer: {
                         AppFooterView()
                             .padding()

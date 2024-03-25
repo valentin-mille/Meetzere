@@ -298,6 +298,8 @@ struct MapAreaView: View {
     @State private var selectedResult: MKMapItem?
     @State private var userTravelInfos: MapTravelInfos
     @State private var friendTravelInfos: MapTravelInfos
+    @Environment(\.requestReview) private var requestReview
+    @Environment(UserPreferences.self) private var preferences
 
     @MapContentBuilder private var mapAnnotationView: some MapContent {
         Annotation("User Location", coordinate: meetingRequest.userLocation.placemark.coordinate) {
@@ -372,6 +374,17 @@ struct MapAreaView: View {
             MapUserLocationButton()
             MapCompass()
             MapScaleView()
+        }
+        .onAppear {
+            if AppStoreReviewManager.shared.shouldShowAppStoreReview() {
+                AnalyticManager.shared.sendSignal(signalType: AnalyticEvent.didShowAppStoreReview)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    requestReview()
+                }
+                if !preferences.isPremium {
+                    preferences.shouldBlockWithPaywall = true
+                }
+            }
         }
     }
 }

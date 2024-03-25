@@ -14,11 +14,12 @@ import SwiftUI
 final class UserPreferences {
 
     class Storage {
-        @AppStorage("hapticFeedbackActivated") public var hapticFeedbackActivated: Bool = false
-        @AppStorage("soundActivated") public var soundActivated: Bool = false
+        @AppStorage("hapticFeedbackActivated") public var hapticFeedbackActivated: Bool = true
         @AppStorage("theme") public var theme: Theme = .main
         @AppStorage("isOnBoardingCompleted") public var isOnBoardingCompleted: Bool = false
+        @AppStorage("didShowFirstPaywall") public var didShowFirstPaywall: Bool = false
         @AppStorage("isPremium") public var isPremium: Bool = false
+        @AppStorage("isPremium") public var shouldBlockWithPaywall: Bool = false
         @AppStorage("processActionCount") public var reviewWorthyActionCount: Int = 0
         @AppStorage("lastVersionPromptedForReview") public var lastVersionPromptedForReview: String?
     }
@@ -29,12 +30,6 @@ final class UserPreferences {
     var hapticFeedbackActivated: Bool {
       didSet {
         storage.hapticFeedbackActivated = hapticFeedbackActivated
-      }
-    }
-
-    var soundActivated: Bool {
-      didSet {
-        storage.soundActivated = soundActivated
       }
     }
 
@@ -50,9 +45,21 @@ final class UserPreferences {
         }
     }
 
+    var didShowFirstPaywall: Bool {
+        didSet {
+          storage.didShowFirstPaywall = didShowFirstPaywall
+        }
+    }
+
     var isPremium: Bool {
         didSet {
           storage.isPremium = isPremium
+        }
+    }
+    
+    var shouldBlockWithPaywall: Bool {
+        didSet {
+          storage.shouldBlockWithPaywall = shouldBlockWithPaywall
         }
     }
 
@@ -70,10 +77,11 @@ final class UserPreferences {
 
     init() {
         hapticFeedbackActivated = storage.hapticFeedbackActivated
-        soundActivated = storage.soundActivated
+        didShowFirstPaywall = storage.didShowFirstPaywall
         theme = storage.theme
         isOnBoardingCompleted = storage.isOnBoardingCompleted
         isPremium = storage.isPremium
+        shouldBlockWithPaywall = storage.shouldBlockWithPaywall
         reviewWorthyActionCount = storage.reviewWorthyActionCount
         lastVersionPromptedForReview = storage.lastVersionPromptedForReview
     }

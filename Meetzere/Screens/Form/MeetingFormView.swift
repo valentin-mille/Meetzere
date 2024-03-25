@@ -65,10 +65,10 @@ final class MeetingRequest: Observable, Identifiable, Hashable, Equatable {
 struct MeetingFormView: View {
     private let meetingCategories: [String] = ["restaurant", "bakery", "brewery"]
     @Environment(UserPreferences.self) private var preferences
-    @State private var userLocation: MKMapItem? = MeetingRequest.preview.userLocation
+    @State private var userLocation: MKMapItem?
     @State private var userTransportType: TransportType = .walking
     @State private var selectedCategory: String = MKPointOfInterestCategory.restaurant.name
-    @State private var friendLocation: MKMapItem? = MeetingRequest.preview.friendLocation
+    @State private var friendLocation: MKMapItem?
     @State private var friendTransportType: TransportType = .walking
     @State private var router = RouterPath()
 
@@ -145,7 +145,15 @@ struct MeetingFormView: View {
                         friendLocation: friendLocation,
                         friendTransportType: friendTransportType
                     )
-                    router.navigate(toDestination: .mapArea(request))
+                    AppStoreReviewManager.shared.incrementReviewWorthyActionCount()
+                    if preferences.shouldBlockWithPaywall {
+                        router.presentedSheet = .paywall(onCompletion: { _ in
+                            preferences.isPremium = true
+                            preferences.shouldBlockWithPaywall = false
+                        })
+                    } else {
+                        router.navigate(toDestination: .mapArea(request))
+                    }
                 },
                        label: {
                     Label {
@@ -172,6 +180,15 @@ struct MeetingFormView: View {
             }
             .withAppRouter()
             .withSheetDestination(sheetDestination: $router.presentedSheet)
+            .onAppear {
+                if !preferences.didShowFirstPaywall {
+                    router.presentedSheet = .paywall(onCompletion: { _ in
+                        preferences.isPremium = true
+                        preferences.shouldBlockWithPaywall = false
+                    })
+                    preferences.didShowFirstPaywall = true
+                }
+            }
         }
     }
 }

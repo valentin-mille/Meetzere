@@ -10,6 +10,7 @@ import Foundation
 public struct AnalyticEvent {
     public static let didGoToAppStoreReview = "didGoToAppStoreReview"
     public static let didShowPaywall = "didShowPaywall"
+    public static let didShowAppStoreReview = "didShowAppStoreReview"
 }
 
 public struct AnalyticParameter {

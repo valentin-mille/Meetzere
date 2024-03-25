@@ -10,17 +10,23 @@
 		431E67602BAF1B7B00BB001B /* ButtonHaptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E675F2BAF1B7B00BB001B /* ButtonHaptic.swift */; };
 		431E67622BAF1E2700BB001B /* PremiumBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E67612BAF1E2700BB001B /* PremiumBannerView.swift */; };
 		431E67642BAF277300BB001B /* UIScreen+current.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E67632BAF277300BB001B /* UIScreen+current.swift */; };
+		431E676B2BAF359200BB001B /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E67672BAF359200BB001B /* OnBoardingView.swift */; };
+		431E676E2BAF369800BB001B /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 431E676D2BAF369800BB001B /* Lottie */; };
+		431E67702BAF3BCF00BB001B /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E676F2BAF3BCF00BB001B /* IndicatorView.swift */; };
+		431E67742BAF3D7D00BB001B /* map.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 431E67732BAF3D7A00BB001B /* map.lottie */; };
+		431E67752BAF3D8000BB001B /* checkmark.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 431E67722BAF3D4200BB001B /* checkmark.lottie */; };
+		431E67772BAF3F0000BB001B /* privacy.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 431E67762BAF3F0000BB001B /* privacy.lottie */; };
+		431E677B2BAF42B500BB001B /* friends.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 431E677A2BAF42B400BB001B /* friends.lottie */; };
+		431E677D2BAF439F00BB001B /* AppStoreReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E677C2BAF439F00BB001B /* AppStoreReviewManager.swift */; };
+		431E677F2BAF43A900BB001B /* InAppPurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E677E2BAF43A900BB001B /* InAppPurchaseManager.swift */; };
+		431E67812BAF43B200BB001B /* AppVersionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431E67802BAF43B200BB001B /* AppVersionManager.swift */; };
+		431E67842BAF71CE00BB001B /* Configuration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 431E67822BAF71A500BB001B /* Configuration.storekit */; };
 		43B0EAB62BA9CD2200A283BF /* MeetzereApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B0EAB52BA9CD2200A283BF /* MeetzereApp.swift */; };
-		43B0EAB82BA9CD2200A283BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B0EAB72BA9CD2200A283BF /* ContentView.swift */; };
-		43B0EABA2BA9CD2200A283BF /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B0EAB92BA9CD2200A283BF /* Item.swift */; };
 		43B0EABC2BA9CD2300A283BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43B0EABB2BA9CD2300A283BF /* Assets.xcassets */; };
 		43B0EABF2BA9CD2300A283BF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43B0EABE2BA9CD2300A283BF /* Preview Assets.xcassets */; };
 		43B0EAC92BA9CD2300A283BF /* MeetzereTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B0EAC82BA9CD2300A283BF /* MeetzereTests.swift */; };
 		43B0EAD32BA9CD2300A283BF /* MeetzereUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B0EAD22BA9CD2300A283BF /* MeetzereUITests.swift */; };
 		43B0EAD52BA9CD2300A283BF /* MeetzereUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B0EAD42BA9CD2300A283BF /* MeetzereUITestsLaunchTests.swift */; };
-		43B0EAE72BAA0E1F00A283BF /* MapButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B0EAE62BAA0E1F00A283BF /* MapButtons.swift */; };
-		43B0EAE92BAA0F3700A283BF /* WWDCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B0EAE82BAA0F3700A283BF /* WWDCMapView.swift */; };
-		43B0EAEB2BAB256300A283BF /* MapSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B0EAEA2BAB256300A283BF /* MapSelectView.swift */; };
 		43B0EAEE2BAB4F4C00A283BF /* MeetingFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B0EAED2BAB4F4C00A283BF /* MeetingFormView.swift */; };
 		43B0EAF42BAB502E00A283BF /* Font+DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B0EAEF2BAB502E00A283BF /* Font+DesignSystem.swift */; };
 		43B0EAF52BAB502E00A283BF /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B0EAF02BAB502E00A283BF /* Styles.swift */; };
@@ -87,10 +93,18 @@
 		431E675F2BAF1B7B00BB001B /* ButtonHaptic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonHaptic.swift; sourceTree = "<group>"; };
 		431E67612BAF1E2700BB001B /* PremiumBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumBannerView.swift; sourceTree = "<group>"; };
 		431E67632BAF277300BB001B /* UIScreen+current.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScreen+current.swift"; sourceTree = "<group>"; };
+		431E67672BAF359200BB001B /* OnBoardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		431E676F2BAF3BCF00BB001B /* IndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
+		431E67722BAF3D4200BB001B /* checkmark.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = checkmark.lottie; sourceTree = "<group>"; };
+		431E67732BAF3D7A00BB001B /* map.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = map.lottie; sourceTree = "<group>"; };
+		431E67762BAF3F0000BB001B /* privacy.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = privacy.lottie; sourceTree = "<group>"; };
+		431E677A2BAF42B400BB001B /* friends.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = friends.lottie; sourceTree = "<group>"; };
+		431E677C2BAF439F00BB001B /* AppStoreReviewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStoreReviewManager.swift; sourceTree = "<group>"; };
+		431E677E2BAF43A900BB001B /* InAppPurchaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppPurchaseManager.swift; sourceTree = "<group>"; };
+		431E67802BAF43B200BB001B /* AppVersionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppVersionManager.swift; sourceTree = "<group>"; };
+		431E67822BAF71A500BB001B /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
 		43B0EAB22BA9CD2200A283BF /* Meetzere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meetzere.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B0EAB52BA9CD2200A283BF /* MeetzereApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetzereApp.swift; sourceTree = "<group>"; };
-		43B0EAB72BA9CD2200A283BF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		43B0EAB92BA9CD2200A283BF /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		43B0EABB2BA9CD2300A283BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43B0EABE2BA9CD2300A283BF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		43B0EAC42BA9CD2300A283BF /* MeetzereTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeetzereTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,9 +112,6 @@
 		43B0EACE2BA9CD2300A283BF /* MeetzereUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeetzereUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B0EAD22BA9CD2300A283BF /* MeetzereUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetzereUITests.swift; sourceTree = "<group>"; };
 		43B0EAD42BA9CD2300A283BF /* MeetzereUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetzereUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		43B0EAE62BAA0E1F00A283BF /* MapButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapButtons.swift; sourceTree = "<group>"; };
-		43B0EAE82BAA0F3700A283BF /* WWDCMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDCMapView.swift; sourceTree = "<group>"; };
-		43B0EAEA2BAB256300A283BF /* MapSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSelectView.swift; sourceTree = "<group>"; };
 		43B0EAED2BAB4F4C00A283BF /* MeetingFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingFormView.swift; sourceTree = "<group>"; };
 		43B0EAEF2BAB502E00A283BF /* Font+DesignSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+DesignSystem.swift"; sourceTree = "<group>"; };
 		43B0EAF02BAB502E00A283BF /* Styles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
@@ -151,6 +162,7 @@
 				43BEAD332BAD8340005F659E /* RevenueCatUI in Frameworks */,
 				43BEAD552BAD83F0005F659E /* TelemetryClient in Frameworks */,
 				43BEAD312BAD8340005F659E /* RevenueCat in Frameworks */,
+				431E676E2BAF369800BB001B /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +183,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		431E67682BAF359200BB001B /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				431E67672BAF359200BB001B /* OnBoardingView.swift */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		431E67712BAF3D3B00BB001B /* lottie */ = {
+			isa = PBXGroup;
+			children = (
+				431E67762BAF3F0000BB001B /* privacy.lottie */,
+				431E67732BAF3D7A00BB001B /* map.lottie */,
+				431E677A2BAF42B400BB001B /* friends.lottie */,
+				431E67722BAF3D4200BB001B /* checkmark.lottie */,
+			);
+			path = lottie;
+			sourceTree = "<group>";
+		};
 		43B0EAA92BA9CD2200A283BF = {
 			isa = PBXGroup;
 			children = (
@@ -194,13 +225,11 @@
 		43B0EAB42BA9CD2200A283BF /* Meetzere */ = {
 			isa = PBXGroup;
 			children = (
-				43B0EAB72BA9CD2200A283BF /* ContentView.swift */,
-				43B0EAB92BA9CD2200A283BF /* Item.swift */,
+				431E67712BAF3D3B00BB001B /* lottie */,
 				43BEAD512BAD83AF005F659E /* Secrets.plist */,
-				43B0EAE62BAA0E1F00A283BF /* MapButtons.swift */,
-				43B0EAEA2BAB256300A283BF /* MapSelectView.swift */,
 				43B0EAB52BA9CD2200A283BF /* MeetzereApp.swift */,
 				43B0EABB2BA9CD2300A283BF /* Assets.xcassets */,
+				431E67822BAF71A500BB001B /* Configuration.storekit */,
 				43B0EAF32BAB502E00A283BF /* DesignSystem */,
 				43BEAD062BAB5CC3005F659E /* Env */,
 				43BEAD0F2BAC2504005F659E /* Extensions */,
@@ -216,7 +245,6 @@
 		43B0EABD2BA9CD2300A283BF /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				43B0EAE82BAA0F3700A283BF /* WWDCMapView.swift */,
 				43B0EABE2BA9CD2300A283BF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -254,6 +282,7 @@
 		43BEAD012BAB5CA1005F659E /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				431E676F2BAF3BCF00BB001B /* IndicatorView.swift */,
 				43BEAD492BAD8363005F659E /* WebView.swift */,
 				43BEAD022BAB5CAA005F659E /* CTAButton.swift */,
 				43BEAD0B2BAC24D8005F659E /* InputStyle.swift */,
@@ -287,6 +316,7 @@
 		43BEAD102BAC3C75005F659E /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				431E67682BAF359200BB001B /* OnBoarding */,
 				43BEAD3F2BAD8354005F659E /* Settings */,
 				43BEAD232BAD71E9005F659E /* Form */,
 				43BEAD1A2BAC490C005F659E /* MapArea */,
@@ -370,6 +400,9 @@
 		43BEAD4B2BAD8379005F659E /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				431E67802BAF43B200BB001B /* AppVersionManager.swift */,
+				431E677E2BAF43A900BB001B /* InAppPurchaseManager.swift */,
+				431E677C2BAF439F00BB001B /* AppStoreReviewManager.swift */,
 				43BEAD5A2BAD86A1005F659E /* HapticManager.swift */,
 				43BEAD562BAD8409005F659E /* SecretLoader.swift */,
 				43BEAD502BAD839B005F659E /* Analytics */,
@@ -406,6 +439,7 @@
 				43BEAD302BAD8340005F659E /* RevenueCat */,
 				43BEAD322BAD8340005F659E /* RevenueCatUI */,
 				43BEAD542BAD83F0005F659E /* TelemetryClient */,
+				431E676D2BAF369800BB001B /* Lottie */,
 			);
 			productName = Meetzere;
 			productReference = 43B0EAB22BA9CD2200A283BF /* Meetzere.app */;
@@ -482,6 +516,7 @@
 			packageReferences = (
 				43BEAD2F2BAD8340005F659E /* XCRemoteSwiftPackageReference "purchases-ios" */,
 				43BEAD532BAD83F0005F659E /* XCRemoteSwiftPackageReference "SwiftClient" */,
+				431E676C2BAF369800BB001B /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = 43B0EAB32BA9CD2200A283BF /* Products */;
 			projectDirPath = "";
@@ -499,9 +534,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				431E677B2BAF42B500BB001B /* friends.lottie in Resources */,
+				431E67842BAF71CE00BB001B /* Configuration.storekit in Resources */,
 				43B0EABF2BA9CD2300A283BF /* Preview Assets.xcassets in Resources */,
+				431E67742BAF3D7D00BB001B /* map.lottie in Resources */,
 				43BEAD522BAD83AF005F659E /* Secrets.plist in Resources */,
+				431E67772BAF3F0000BB001B /* privacy.lottie in Resources */,
 				43B0EABC2BA9CD2300A283BF /* Assets.xcassets in Resources */,
+				431E67752BAF3D8000BB001B /* checkmark.lottie in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,32 +571,34 @@
 				43B0EAF52BAB502E00A283BF /* Styles.swift in Sources */,
 				43BEAD082BAB5CC3005F659E /* UserPreferences.swift in Sources */,
 				43BEAD402BAD8355005F659E /* AppFooterView.swift in Sources */,
-				43B0EAEB2BAB256300A283BF /* MapSelectView.swift in Sources */,
 				43BEAD472BAD8355005F659E /* SettingsViewModel.swift in Sources */,
 				43BEAD482BAD8355005F659E /* SettingSwitchRow.swift in Sources */,
 				43BEAD422BAD8355005F659E /* ImageIconView.swift in Sources */,
 				43BEAD462BAD8355005F659E /* SettingsView.swift in Sources */,
 				43BEAD0A2BAB60D6005F659E /* MapAddressSelection.swift in Sources */,
 				43BEAD032BAB5CAA005F659E /* CTAButton.swift in Sources */,
-				43B0EAB82BA9CD2200A283BF /* ContentView.swift in Sources */,
 				43BEAD152BAC3D0B005F659E /* LocationService.swift in Sources */,
 				43BEAD1C2BAC6A6B005F659E /* MKMapItem+Samples.swift in Sources */,
+				431E677D2BAF439F00BB001B /* AppStoreReviewManager.swift in Sources */,
 				43BEAD132BAC3CAE005F659E /* MapAddressSelectionSheet.swift in Sources */,
 				43BEAD2A2BAD82A2005F659E /* RouterDestination.swift in Sources */,
-				43B0EABA2BA9CD2200A283BF /* Item.swift in Sources */,
 				43BEAD222BACA392005F659E /* MKPointOfInterestCategory+Name.swift in Sources */,
 				43BEAD172BAC3D3C005F659E /* MapResultType.swift in Sources */,
 				43BEAD412BAD8355005F659E /* AppFooterViewModel.swift in Sources */,
 				43BEAD452BAD8355005F659E /* SettingRow.swift in Sources */,
+				431E67812BAF43B200BB001B /* AppVersionManager.swift in Sources */,
 				431E67622BAF1E2700BB001B /* PremiumBannerView.swift in Sources */,
+				431E677F2BAF43A900BB001B /* InAppPurchaseManager.swift in Sources */,
 				43B0EAF42BAB502E00A283BF /* Font+DesignSystem.swift in Sources */,
 				43BEAD192BAC3DD0005F659E /* MapLookAroundView.swift in Sources */,
 				43BEAD2B2BAD82A2005F659E /* RouterPath.swift in Sources */,
 				43BEAD2C2BAD82A2005F659E /* SheetDestination.swift in Sources */,
+				431E676B2BAF359200BB001B /* OnBoardingView.swift in Sources */,
 				43BEAD442BAD8355005F659E /* SettingPickerRow.swift in Sources */,
 				43BEAD0E2BAC2502005F659E /* View+StrokeRounded.swift in Sources */,
 				431E67642BAF277300BB001B /* UIScreen+current.swift in Sources */,
 				43BEAD572BAD8409005F659E /* SecretLoader.swift in Sources */,
+				431E67702BAF3BCF00BB001B /* IndicatorView.swift in Sources */,
 				43B0EAB62BA9CD2200A283BF /* MeetzereApp.swift in Sources */,
 				431E67602BAF1B7B00BB001B /* ButtonHaptic.swift in Sources */,
 				43BEAD5B2BAD86A1005F659E /* HapticManager.swift in Sources */,
@@ -565,7 +607,6 @@
 				43B0EAF72BAB502E00A283BF /* View+Shadow.swift in Sources */,
 				43BEAD432BAD8355005F659E /* SettingMenuRow.swift in Sources */,
 				43BEAD2D2BAD82A2005F659E /* View+Router.swift in Sources */,
-				43B0EAE92BAA0F3700A283BF /* WWDCMapView.swift in Sources */,
 				43BEAD0C2BAC24D8005F659E /* InputStyle.swift in Sources */,
 				43B0EAF62BAB502E00A283BF /* Theme.swift in Sources */,
 				43BEAD4F2BAD8398005F659E /* AnalyticEvent.swift in Sources */,
@@ -573,7 +614,6 @@
 				43B0EAEE2BAB4F4C00A283BF /* MeetingFormView.swift in Sources */,
 				43BEAD5D2BADD08E005F659E /* TransportType.swift in Sources */,
 				43BEAD202BAC706C005F659E /* TagSelectionView.swift in Sources */,
-				43B0EAE72BAA0E1F00A283BF /* MapButtons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -736,7 +776,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"Meetzere/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = NRKB5KQT35;
@@ -776,7 +816,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"Meetzere/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = NRKB5KQT35;
@@ -815,7 +855,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = NRKB5KQT35;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
@@ -835,7 +875,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = NRKB5KQT35;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
@@ -854,7 +894,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = NRKB5KQT35;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -872,7 +912,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = NRKB5KQT35;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -927,6 +967,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		431E676C2BAF369800BB001B /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.1;
+			};
+		};
 		43BEAD2F2BAD8340005F659E /* XCRemoteSwiftPackageReference "purchases-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/RevenueCat/purchases-ios.git";
@@ -946,6 +994,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		431E676D2BAF369800BB001B /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 431E676C2BAF369800BB001B /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
 		43BEAD302BAD8340005F659E /* RevenueCat */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 43BEAD2F2BAD8340005F659E /* XCRemoteSwiftPackageReference "purchases-ios" */;
