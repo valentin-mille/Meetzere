@@ -19,7 +19,7 @@ final class UserPreferences {
         @AppStorage("isOnBoardingCompleted") public var isOnBoardingCompleted: Bool = false
         @AppStorage("didShowFirstPaywall") public var didShowFirstPaywall: Bool = false
         @AppStorage("isPremium") public var isPremium: Bool = false
-        @AppStorage("isPremium") public var shouldBlockWithPaywall: Bool = false
+        @AppStorage("shouldBlockWithPaywall") public var shouldBlockWithPaywall: Bool = false
         @AppStorage("processActionCount") public var reviewWorthyActionCount: Int = 0
         @AppStorage("lastVersionPromptedForReview") public var lastVersionPromptedForReview: String?
     }
